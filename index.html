@@ -26,8 +26,10 @@
             extend: {
               colors: {
                 clifford: '#da373d',
-                'btn-primary': '#ABEF5F',
-                'btn-secondary': '#ABEF5F80',
+                'btn-primary': '#B4F461',
+                'btn-secondary': '#1111110D',
+                'nav-color': '#F9F7F3',
+                'btn-text': '#111111B3'
               },
               fontFamily:{
                 'lexend': ["Lexend", "sans-serif"],
@@ -39,8 +41,27 @@
       </script>
 </head>
 <body class="font-lexend">
-    <header></header>
-    <main></main>
+    <header class="mb-20">
+        <nav class="bg-nav-color px-3 py-5 w-11/12 mx-auto flex justify-between items-center">
+            <div>
+                <button class="btn bg-btn-primary ">Blog</button>
+            </div>
+            <div class="flex justify-between items-center gap-3">
+                <img src="assets/logo.png" alt="">
+                <h2 class="text-2xl font-bold">Donate Bangladesh</h2>
+            </div>
+            <div class="flex justify-between items-center gap-2">
+                <img src="assets/coin.png" alt="">
+                <button class="btn"><span>5500</span> BDT </button>
+            </div>
+        </nav>
+    </header>
+    <main class="w-11/12 mx-auto " >
+        <div class="flex justify-center items-center gap-4">
+            <button class="btn bg-btn-primary rounded-lg">Donation</button>
+            <button class="btn rounded-lg bg-slate-100 text-btn-text border-slate-500">History</button>
+        </div>
+    </main>
     <footer></footer>
 </body>
 </html>
