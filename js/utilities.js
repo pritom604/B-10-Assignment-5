@@ -8,9 +8,18 @@ function getTotalBalanceById(id){
     return balance;
 }
 
-function openPopup(id){
-    document.getElementById(id).classList.remove('hidden')
-}
-function closePopup(id){
+function closeButtonById(id){
     document.getElementById(id).classList.add('hidden')
+
 }
+
+const closeBtn = document.getElementById('closeBtn').addEventListener('click',function(){
+    closeButtonById('pop1');
+})
+const closeBtn1 = document.getElementById('closeBtn1').addEventListener('click',function(){
+    closeButtonById('pop2');
+})
+const closeBtn2 = document.getElementById('closeBtn2').addEventListener('click',function(){
+    closeButtonById('pop3');
+})
+
