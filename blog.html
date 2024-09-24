@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,7 +39,71 @@
         }
       </script>
 </head>
-<body class="font-lexend">
-    
+<body class="font-lexend w-full">
+    <header class="mb-10 bg-nav-color sticky top-0 z-50   ">
+        <nav class=" px-3 py-5 w-11/12 mx-auto flex justify-between items-center sticky top-0">
+            <div>
+                <button id="homeBtn" class="btn bg-btn-primary ">Home</button>
+            </div>
+            <div class="flex justify-between items-center gap-3">
+                <img src="assets/logo.png" alt="">
+                <h2 class="text-2xl font-bold">Donate Bangladesh</h2>
+            </div>
+            <div class="flex justify-between items-center gap-2">
+                <img src="assets/coin.png" alt="">
+                <button class="btn"><span id="totalBalance">5500</span> BDT </button>
+            </div>
+            
+        </nav>
+        <section class=''>
+          <div class="flex justify-center items-center gap-4 mb-10">
+            <button id="donationBtn" class="btn bg-btn-primary rounded-lg">Donation</button>
+            <button id="historyBtn" class="btn rounded-lg  text-btn-text border-slate-500">History</button>
+        </div>
+         </section>
+        
+    </header>
+    <main>
+        <h2 class="text-2xl font-bold text-center mb-3">Frequently Asked Question</h2>
+        <div class="join w-10/12 join-vertical p-10">
+            <div class="collapse collapse-arrow join-item border-base-300 border">
+              <input type="radio" name="my-accordion-4" checked="checked" />
+              <div class="collapse-title text-xl font-medium">What is the Document Object Model?</div>
+              <div class="collapse-content">
+                <p>The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of a web page as a tree of objects, allowing programs (like JavaScript) to dynamically access and manipulate the content, structure, and styles of the page.</p>
+              </div>
+            </div>
+            <div class="collapse collapse-arrow join-item border-base-300 border">
+              <input type="radio" name="my-accordion-4" />
+              <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+              <div class="collapse-content">
+                <p>To select an element from the Document Object Model (DOM), JavaScript provides several methods. These methods allow developers to target specific elements based on attributes like ID, class, tag name, or even more complex CSS selectors.</p>
+              </div>
+            </div>
+            <div class="collapse collapse-arrow join-item border-base-300 border">
+              <input type="radio" name="my-accordion-4" />
+              <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
+              <div class="collapse-content">
+                <p>
+                    Event delegation is a technique in the DOM that allows you to handle events at a higher level in the document tree rather than attaching individual event listeners to each target element. By taking advantage of event bubbling, you can place a single event listener on a parent element and catch events from its children as they propagate up the DOM tree.</p>
+              </div>
+            </div>
+            <div class="collapse collapse-arrow join-item border-base-300 border">
+              <input type="radio" name="my-accordion-4" />
+              <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
+              <div class="collapse-content">
+                <p>
+                    You can manipulate an element's attributes and styles using the DOM through JavaScript. There are several methods and properties available for both attributes and styles that allow you to dynamically change the behavior, appearance, and content of web elements.</p>
+              </div>
+            </div>
+          </div>
+    </main>
+    <script src="js/index.js"></script>
+    <script src="js/utilities.js"></script>
+    <script>
+        document.getElementById('homeBtn').addEventListener('click',function(){
+            window.location.href = ('/index.html')
+        })
+    </script>
 </body>
 </html>
