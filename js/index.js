@@ -28,3 +28,36 @@ qoutaDonation.addEventListener('click', function(){
     const remainingBalance = totalBalance - donateQouta;
     document.getElementById('totalBalance').innerText = remainingBalance
 })
+
+const historyTab = document.getElementById('historyBtn')
+historyTab.addEventListener('click', function(){
+    historyTab.classList.add(
+        
+        'bg-btn-primary', 
+        'rounded-lg',
+        
+    )
+    const donationTab = document.getElementById('donationBtn')
+    donationTab.classList.remove(
+        'bg-btn-primary', 
+        'rounded-lg',
+        
+    )
+    document.getElementById('bannerSection').classList.add('hidden')
+})
+const donationTab = document.getElementById('donationBtn')
+donationTab.addEventListener('click',function(){
+    donationTab.classList.add(
+        'bg-btn-primary', 
+        'rounded-lg'
+    )
+    historyTab.classList.remove(
+        'bg-btn-primary', 
+        'rounded-lg',
+    )
+    document.getElementById('bannerSection').classList.remove('hidden')
+    
+
+
+})
+
