@@ -1,11 +1,11 @@
-let count = 0;
+
 const donateNowBtn = document.getElementById('flood-donate-1-btn')
 donateNowBtn.addEventListener('click',function(){
 
    
     
-    const donateNoakhali = getInputValueById('noakhaliDonateAmount').toFixed(2)
-    const totalBalance = getTotalBalanceById('totalBalance').toFixed(2)
+    const donateNoakhali = getInputValueById('noakhaliDonateAmount')
+    const totalBalance = getTotalBalanceById('totalBalance')
     if(donateNoakhali <=0 || isNaN(donateNoakhali)|| donateNoakhali > totalBalance){
         alert('Invalid Input')
         return;
@@ -23,8 +23,8 @@ donateNowBtn.addEventListener('click',function(){
 const donateNowBtn2 = document.getElementById('flood-donate-2-btn')
 donateNowBtn2.addEventListener('click',function(){
    
-    const donateFeni = getInputValueById('feni-donate-amount').toFixed(2)
-    const totalBalance = getTotalBalanceById('totalBalance').toFixed(2)
+    const donateFeni = getInputValueById('feni-donate-amount')
+    const totalBalance = getTotalBalanceById('totalBalance')
 
     if(donateFeni <=0 || isNaN(donateFeni)|| donateFeni > totalBalance){
         alert('Invalid Input')
@@ -42,8 +42,8 @@ donateNowBtn2.addEventListener('click',function(){
 
 const qoutaDonation = document.getElementById('qouta-donate-btn')
 qoutaDonation.addEventListener('click', function(){
-    const donateQouta = getInputValueById('qouta-donate-amount').toFixed(2)
-    const totalBalance = getTotalBalanceById('totalBalance').toFixed(2)
+    const donateQouta = getInputValueById('qouta-donate-amount')
+    const totalBalance = getTotalBalanceById('totalBalance')
     if(donateQouta <=0 || isNaN(donateQouta)|| donateQouta > totalBalance){
         alert('Invalid Input')
         return;
@@ -60,7 +60,7 @@ qoutaDonation.addEventListener('click', function(){
 
 const historyTab = document.getElementById('historyBtn')
 historyTab.addEventListener('click', function(){
-    count+=1;
+    
     historyTab.classList.add(
         
         'bg-btn-primary', 
@@ -74,25 +74,28 @@ historyTab.addEventListener('click', function(){
         
     )
     document.getElementById('bannerSection').classList.add('hidden')
-    const donateNoakhali = getInputValueById('noakhaliDonateAmount').toFixed(2)
-    const donateFeni = getInputValueById('feni-donate-amount').toFixed(2) 
-    const donateQouta = getInputValueById('qouta-donate-amount').toFixed(2)
 
+    const donateNoakhali = getInputValueById('noakhaliDonateAmount')
+    const donateFeni = getInputValueById('feni-donate-amount')
+    const donateQouta = getInputValueById('qouta-donate-amount')
     
-
+    document.getElementById('history-section').classList.remove('hidden')
+    
     const historyItem = document.createElement('div')
     historyItem.className = 'bg-white p-3 rounded-md border-l-2 border-indigo-500'
     historyItem.innerHTML = 
-
+    
     `
-    <p class = 'text-xs text-gray-500'> ${new Date().toDateString()}</p>
-    <p class = 'text-xs text-gray-500'>Income:  $${donateNoakhali}</p>
+    <p class = 'text-xl text-gray-500 font-bold'> DonatION for famine-2024 at Feni, Bangladesh: ${donateFeni}</p>
+    <p class = 'text-xl text-gray-500 font-bold'> DonatION for famine-2024 at Feni, Bangladesh: ${donateNoakhali}</p>
+    <p class = 'text-xl text-gray-500 font-bold'> DonatION for famine-2024 at Feni, Bangladesh: ${donateQouta}</p>
+    <p class = 'text-xs text-gray-500'>Date: ${new Date()}</p>
     `
-   
     const historyContainer = document.getElementById('history-list')
-    historyContainer.append(historyItem)
+    console.log(historyItem.innerText)
+  
 
-    document.getElementById('history-section').classList.remove('hidden')
+    
 })
 const donationTab = document.getElementById('donationBtn')
 donationTab.addEventListener('click',function(){
