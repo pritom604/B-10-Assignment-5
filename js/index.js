@@ -134,7 +134,7 @@ donationTab.addEventListener('click',function(){
         'rounded-lg',
     )
     document.getElementById('bannerSection').classList.remove('hidden')
-    // document.getElementById('history-list').classList.add('hidden')
+    document.getElementById('history-list').classList.add('hidden')
 
     
 
