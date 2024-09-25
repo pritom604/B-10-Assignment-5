@@ -92,7 +92,7 @@ historyTab.addEventListener('click', function(){
     <p class = 'text-xs text-gray-500'>Date: ${new Date()}</p>
     `
     const historyContainer = document.getElementById('history-list')
-    console.log(historyItem.innerText)
+    historyContainer.insertBefore(historyItem,historyContainer)
   
 
     
