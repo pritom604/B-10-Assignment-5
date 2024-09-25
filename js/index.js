@@ -78,22 +78,28 @@ historyTab.addEventListener('click', function(){
     const donateNoakhali = getInputValueById('noakhaliDonateAmount')
     const donateFeni = getInputValueById('feni-donate-amount')
     const donateQouta = getInputValueById('qouta-donate-amount')
+   
+    console.log(donateNoakhali)
+        const history = document.getElementById('history-list')
+        const div = document.createElement('div');
+        
+        const date = new Date()
+        let text = date.toString();
+
+        div.innerHTML = `
+        <div class = "px-6 py-8 mt-6 border-2 border-solid border-gray-300 rounded-lg">
+        <h2 class = "text-2xl font-bold "> ${donateNoakhali} TK is added</h2>
+        <h2 class = "text-2xl font-bold "> ${donateFeni} TK is added</h2>
+        <h2 class = "text-2xl font-bold "> ${donateQouta} TK is added</h2>
+        <p class = "mt-2 text-lg"> Date : ${text}</p>
+        </div>
+        `
+        history.appendChild(div)
+        // console.log(div)
+
+        document.getElementById('history-list').classList.remove('hidden')
+        
     
-    document.getElementById('history-section').classList.remove('hidden')
-    
-    const historyItem = document.createElement('div')
-    historyItem.className = 'bg-white p-3 rounded-md border-l-2 border-indigo-500'
-    historyItem.innerHTML = 
-    
-    `
-    <p class = 'text-xl text-gray-500 font-bold'> DonatION for famine-2024 at Feni, Bangladesh: ${donateFeni}</p>
-    <p class = 'text-xl text-gray-500 font-bold'> DonatION for famine-2024 at Feni, Bangladesh: ${donateNoakhali}</p>
-    <p class = 'text-xl text-gray-500 font-bold'> DonatION for famine-2024 at Feni, Bangladesh: ${donateQouta}</p>
-    <p class = 'text-xs text-gray-500'>Date: ${new Date()}</p>
-    `
-    const historyContainer = document.getElementById('history-list')
-    historyContainer.insertBefore(historyItem,historyContainer)
-  
 
     
 })
