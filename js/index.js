@@ -16,6 +16,20 @@ donateNowBtn.addEventListener('click',function(){
 
     document.getElementById('pop1').classList.remove('hidden')
     document.getElementById('noakhaliDonateAmount').value =''
+
+    const history = document.getElementById('history-list')
+      const div = document.createElement('div');
+
+      const date = new Date()
+         let text = date.toString();
+         
+         div.innerHTML = `
+         <div class = "px-6 py-8 mt-6 border-2 border-solid border-gray-300 rounded-lg">
+         <h2 class = "text-2xl font-bold "> ${donateNoakhali}  Taka is Donated for famine-2024 at Noakhali, Bangladesh</h2>
+         <p class = "mt-2 text-lg"> Date : ${text}</p>
+         </div>
+         `
+         history.appendChild(div)
    
     
 })
@@ -36,6 +50,19 @@ donateNowBtn2.addEventListener('click',function(){
    
     document.getElementById('pop2').classList.remove('hidden')
     document.getElementById('feni-donate-amount').value =''
+    const history = document.getElementById('history-list')
+      const div = document.createElement('div');
+
+      const date = new Date()
+         let text = date.toString();
+         
+         div.innerHTML = `
+         <div class = "px-6 py-8 mt-6 border-2 border-solid border-gray-300 rounded-lg">
+         <h2 class = "text-2xl font-bold "> ${donateFeni}  Taka is Donated for Flood Relief in Feni, Bangladesh</h2>
+         <p class = "mt-2 text-lg"> Date : ${text}</p>
+         </div>
+         `
+         history.appendChild(div)
 
 })
 
@@ -54,6 +81,19 @@ qoutaDonation.addEventListener('click', function(){
 
     document.getElementById('pop3').classList.remove('hidden')
     document.getElementById('qouta-donate-amount').value = ''
+    const history = document.getElementById('history-list')
+      const div = document.createElement('div');
+
+      const date = new Date()
+         let text = date.toString();
+         
+         div.innerHTML = `
+         <div class = "px-6 py-8 mt-6 border-2 border-solid border-gray-300 rounded-lg">
+         <h2 class = "text-2xl font-bold "> ${donateQouta}   Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</h2>
+         <p class = "mt-2 text-lg"> Date : ${text}</p>
+         </div>
+         `
+         history.appendChild(div)
 
 })
 
@@ -74,30 +114,10 @@ historyTab.addEventListener('click', function(){
         
     )
     document.getElementById('bannerSection').classList.add('hidden')
+    document.getElementById('history-list').classList.remove('hidden')
 
-    const donateNoakhali = getInputValueById('noakhaliDonateAmount')
-    const donateFeni = getInputValueById('feni-donate-amount')
-    const donateQouta = getInputValueById('qouta-donate-amount')
+
    
-    console.log(donateNoakhali)
-        const history = document.getElementById('history-list')
-        const div = document.createElement('div');
-        
-        const date = new Date()
-        let text = date.toString();
-
-        div.innerHTML = `
-        <div class = "px-6 py-8 mt-6 border-2 border-solid border-gray-300 rounded-lg">
-        <h2 class = "text-2xl font-bold "> ${donateNoakhali} TK is added</h2>
-        <h2 class = "text-2xl font-bold "> ${donateFeni} TK is added</h2>
-        <h2 class = "text-2xl font-bold "> ${donateQouta} TK is added</h2>
-        <p class = "mt-2 text-lg"> Date : ${text}</p>
-        </div>
-        `
-        history.appendChild(div)
-        // console.log(div)
-
-        document.getElementById('history-list').classList.remove('hidden')
         
     
 
@@ -114,7 +134,7 @@ donationTab.addEventListener('click',function(){
         'rounded-lg',
     )
     document.getElementById('bannerSection').classList.remove('hidden')
-    document.getElementById('history-section').classList.add('hidden')
+    // document.getElementById('history-list').classList.add('hidden')
 
     
 
